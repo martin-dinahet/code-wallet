@@ -4,7 +4,7 @@ export const IndexPage: React.FC = () => {
   return (
     <>
       <main>
-        <h1>Hello, World!</h1>
+        <h1>This is the 'Home' page.</h1>
       </main>
     </>
   );
