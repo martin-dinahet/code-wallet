@@ -5,17 +5,20 @@ import { Route } from "react-router-dom";
 import { StrictMode } from "react";
 import { RootLayout } from "./layouts/root-layout";
 import { IndexPage } from "./pages";
+import { ThemeProvider } from "./providers/theme-provider";
 
 createRoot(document.querySelector("#root")).render(
   <>
     <StrictMode>
-      <HashRouter>
-        <Routes>
-          <Route path="/" element={<RootLayout />}>
-            <Route index element={<IndexPage />} />
-          </Route>
-        </Routes>
-      </HashRouter>
+      <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
+        <HashRouter>
+          <Routes>
+            <Route path="/" element={<RootLayout />}>
+              <Route index element={<IndexPage />} />
+            </Route>
+          </Routes>
+        </HashRouter>
+      </ThemeProvider>
     </StrictMode>
   </>
 );
