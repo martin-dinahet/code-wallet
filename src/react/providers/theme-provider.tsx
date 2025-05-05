@@ -1,11 +1,19 @@
 import React from "react";
+import { ThemeContext } from "../contexts/theme-context";
+import { Theme } from "../lib/types";
+
+export type ThemeProviderProps = {
+  children: React.ReactNode;
+  defaultTheme: Theme;
+  storageKey: string;
+};
 
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children, defaultTheme, storageKey, ...props }) => {
   const [theme, setTheme] = React.useState<Theme>(() => (localStorage.getItem(storageKey) as Theme) || defaultTheme);
 
   React.useEffect(() => {
     window.document.documentElement.classList.remove("light", "dark");
-    if (theme === "system") {
+    if (theme === "dark") {
       const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
       window.document.documentElement.classList.add(systemTheme);
       return;

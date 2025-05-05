@@ -10,7 +10,7 @@ import { ThemeProvider } from "./providers/theme-provider";
 createRoot(document.querySelector("#root")).render(
   <>
     <StrictMode>
-      <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
+      <ThemeProvider defaultTheme="light" storageKey="theme">
         <HashRouter>
           <Routes>
             <Route path="/" element={<RootLayout />}>
