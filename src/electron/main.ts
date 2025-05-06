@@ -1,6 +1,8 @@
 import { app, BrowserWindow, Menu } from "electron";
 import path from "node:path";
 
+process.env.SNIPPET_FILE = path.join(app.getPath("userData"), "snippets.json");
+
 app.on("ready", () => {
   const mainWindow = new BrowserWindow({
     width: 800,
@@ -11,7 +13,7 @@ app.on("ready", () => {
       contextIsolation: true,
     },
   });
-  Menu.setApplicationMenu(Menu.buildFromTemplate([]));
+  // Menu.setApplicationMenu(Menu.buildFromTemplate([]));
   mainWindow.loadURL(MAIN_WINDOW_VITE_DEV_SERVER_URL);
 });
 

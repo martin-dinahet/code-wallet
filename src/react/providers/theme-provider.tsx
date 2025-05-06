@@ -1,14 +1,14 @@
 import React from "react";
 import { ThemeContext } from "../contexts/theme-context";
-import { Theme } from "../lib/types";
+import { Theme } from "../../types";
 
-export type ThemeProviderProps = {
+type Props = {
   children: React.ReactNode;
   defaultTheme: Theme;
   storageKey: string;
 };
 
-export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children, defaultTheme, storageKey, ...props }) => {
+export const ThemeProvider: React.FC<Props> = ({ children, defaultTheme, storageKey, ...props }) => {
   const [theme, setTheme] = React.useState<Theme>(() => (localStorage.getItem(storageKey) as Theme) || defaultTheme);
 
   React.useEffect(() => {

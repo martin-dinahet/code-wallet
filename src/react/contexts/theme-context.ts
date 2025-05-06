@@ -1,5 +1,5 @@
 import React from "react";
-import { Theme } from "../lib/types";
+import { Theme } from "../../types";
 
 export type ThemeContextType = {
   theme: Theme;

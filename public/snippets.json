@@ -1,0 +1,12 @@
+[
+  {
+    "id": "snippet-01",
+    "title": "Example snippet",
+    "language": "javascript",
+    "tags": [
+      { "id": "tag-01", "title": "example" },
+      { "id": "tag-02", "title": "web development" }
+    ],
+    "content": "console.log('Hello, World!')"
+  }
+]
