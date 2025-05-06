@@ -3,7 +3,7 @@ import { Snippet } from "../types";
 import fs from "node:fs";
 import path from "node:path";
 
-const filePath = process.env.SNIPPET_FILE || path.join(__dirname, "assets", "snippets.json");
+const filePath = process.env.SNIPPET_FILE || path.join(__dirname, "snippets.json");
 
 contextBridge.exposeInMainWorld("snippetAPI", {
   getSnippets: () => {

@@ -39,6 +39,7 @@
     "vite": "^6.3.5"
   },
   "dependencies": {
+    "@headlessui/react": "^2.2.2",
     "@tailwindcss/postcss": "^4.1.5",
     "electron-squirrel-startup": "^1.0.1",
     "lucide-react": "^0.507.0",
