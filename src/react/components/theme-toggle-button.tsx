@@ -2,7 +2,7 @@ import React from "react";
 import { Moon } from "lucide-react";
 import { Sun } from "lucide-react";
 import { useTheme } from "../hooks/use-theme";
-import { Button } from "@headlessui/react";
+import { PrettyButton } from "./ui/pretty-button";
 
 export const ThemeToggleButton: React.FC = () => {
   const { theme, setTheme } = useTheme();
@@ -14,7 +14,9 @@ export const ThemeToggleButton: React.FC = () => {
 
   return (
     <>
-      <Button onClick={toggleTheme}>{theme === "dark" ? <Sun /> : <Moon />}</Button>
+      <PrettyButton variant="ghost" onClick={toggleTheme}>
+        {theme === "dark" ? <Sun /> : <Moon />}
+      </PrettyButton>
     </>
   );
 };

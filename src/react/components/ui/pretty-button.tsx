@@ -4,7 +4,7 @@ import { cn } from "../../lib/utils";
 
 type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   children: React.ReactNode;
-  variant: "primary" | "secondary" | "accent" | "destructive";
+  variant: "primary" | "secondary" | "accent" | "destructive" | "ghost";
 };
 
 const variantClasses: Record<Props["variant"], string> = {
@@ -12,6 +12,7 @@ const variantClasses: Record<Props["variant"], string> = {
   secondary: "bg-secondary text-secondary-foreground border-secondary hover:bg-secondary-hover",
   accent: "bg-accent text-accent-foreground border-accent hover:bg-accent-hover",
   destructive: "bg-destructive border-destructive hover:bg-destructive-hover",
+  ghost: "bg-background text-foreground border-none hover:bg-muted",
 };
 
 export const PrettyButton: React.FC<Props> = ({ children, variant, ...props }) => {
