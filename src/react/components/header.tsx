@@ -21,15 +21,15 @@ export const Header: React.FC<Props> = ({ ...props }) => {
         <ul className="flex gap-2">
           <li>
             <PrettyButton variant="primary">
-              <Link to="/snippet-form" className="flex gap-2">
-                <Plus /> New Snippet
+              <Link to="/snippet-form/?new=true" className="flex gap-2">
+                New Snippet
               </Link>
             </PrettyButton>
           </li>
           <li>
             <PrettyButton variant="primary">
               <Link to="/snippets" className="flex gap-2">
-                <CodeXml /> Snippets
+                Snippets
               </Link>
             </PrettyButton>
           </li>
